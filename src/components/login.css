@@ -1,0 +1,80 @@
+/* src/components/login.css - Versão corrigida */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e88e5, #0d47a1);
+  padding: 20px;
+}
+
+.login-box {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.logo-part-1 {
+  color: #1e88e5;
+  font-weight: 700;
+}
+
+.logo-part-2 {
+  color: #ff5722;
+  font-weight: 700;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.login-input:focus {
+  border-color: #1e88e5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.2);
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #1e88e5, #0d47a1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.login-button:hover {
+  background: linear-gradient(to right, #0d47a1, #1e88e5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 71, 161, 0.3);
+}
