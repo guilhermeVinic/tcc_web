@@ -1,0 +1,138 @@
+/* src/components/admin.css */
+.admin-container {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  height: 40px;
+}
+
+.admin-header h1 {
+  color: var(--dark);
+  margin: 0;
+  font-size: 24px;
+}
+
+.back-button {
+  background: var(--dark);
+  color: white;
+}
+
+.admin-main {
+  padding: 40px;
+}
+
+.admin-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-card h2 {
+  color: var(--dark);
+  margin-top: 0;
+}
+
+.admin-card p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.servico-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.servico-card:hover {
+  transform: translateY(-5px);
+}
+
+.view-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.servico-desc {
+  color: #555;
+  line-height: 1.5;
+  min-height: 60px;
+}
+
+.price-tag {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.price-tag.fixo {
+  color: var(--primary);
+}
+
+.price-tag.promocao {
+  color: var(--danger);
+}
+
+.promo-badge {
+  background: var(--danger);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.edit-btn {
+  background: var(--secondary);
+  color: var(--dark);
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Estilos para o modo de edição */
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ... (outros estilos de edição mantidos) ... */
+
+@media (max-width: 768px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
