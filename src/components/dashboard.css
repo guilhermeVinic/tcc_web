@@ -1,0 +1,163 @@
+/* Adicione estas regras ao seu arquivo dashboard.css */
+
+.controles-agendamento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+}
+
+.filtro-btn {
+  padding: 8px 16px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filtro-btn.active {
+  background: var(--primary);
+  color: white;
+}
+
+.novo-agendamento-btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.agendamentos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.agendamento-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.agendamento-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.agendamento-info {
+  margin-bottom: 15px;
+}
+
+.agendamento-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge.pendente {
+  background: #FFF3CD;
+  color: #856404;
+}
+
+.status-badge.confirmado {
+  background: #D1ECF1;
+  color: #0C5460;
+}
+
+.status-badge.concluido {
+  background: #D4EDDA;
+  color: #155724;
+}
+
+.agendamento-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.agendamento-actions button {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.confirmar-btn {
+  background: #28A745;
+  color: white;
+}
+
+.cancelar-btn {
+  background: #DC3545;
+  color: white;
+}
+
+.concluir-btn {
+  background: #17A2B8;
+  color: white;
+}
+
+.editar-btn {
+  background: #6C757D;
+  color: white;
+}
+
+.carregando {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid var(--primary);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.sem-agendamentos {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .controles-agendamento {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .agendamentos-lista {
+    grid-template-columns: 1fr;
+  }
+}
